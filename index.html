@@ -13,6 +13,7 @@
     <script src="public/Assets/js/jquery-3.4.1.min.js"></script>
     <script src="public/Assets/js/app.js"></script>
     <script>
+        var adress = window.location.toString()
         $(function(){
             const urlParams = new URLSearchParams(window.location.search);
             var meeting_id = urlParams.get('meetingID');
@@ -27,18 +28,18 @@
 
             MyApp._init(user_id,meeting_id);
         })
-        /**$(document).on("click", ".room2", function(){
-                var room2 = window.location+"?room2";
+       /** $(document).on("click", ".room2", function(){
+                room2 = adress.slice(-1) + "2";
                 window.location.replace(room2);
             })
         (document).on("click", ".room3", function(){
-                var meetingUrl = window.location.origin+"?room3";
+                var room3 = adress +"?room3";
                 window.location.replace(meetingUrl);
             })
         (document).on("click", ".room4", function(){
                 var meetingUrl = window.location.origin+"?room4";
                 window.location.replace(meetingUrl);
-            })**/
+            }) **/
 
     </script>
 </head>
@@ -212,10 +213,10 @@
                     <div class="dropup">
                         <button class="dropbtn">Rooms</button>
                         <div class="dropup-content">
-                          <a href="https://breakout-ci.herokuapp.com/?meetingID=98138933">Main room</a>
-                          <a href="https://breakout-ci.herokuapp.com/?meetingID=98138933Room2">Room 2</a>
-                          <a href="https://breakout-ci.herokuapp.com/?meetingID=98138933Room3">Room 3</a>
-                          <a href="https://breakout-ci.herokuapp.com/?meetingID=98138933Room4">Room 4</a>
+                          <a href="http://localhost:3000/?meetingID=58863311">Main room</a>
+                          <a href="http://localhost:3000/?meetingID=58863312">Room 2</a> 
+                          <a href="http://localhost:3000/?meetingID=58863313">Room 3</a>
+                          <a href="http://localhost:3000/?meetingID=58863314">Room 4</a>
                     
                         </div>
                       </div>
